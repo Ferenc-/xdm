@@ -220,24 +220,6 @@ if test -x $xmodmap -o -x $xkbcomp ; then
 fi
 
 #
-# No xconsole for kdm/gdm case
+# No xconsole in any case
 #
-test "$xdm" = "no" && exit 0
-
-#
-# Only for display :0 we have to set up the xconsole to be
-# sure that the system messages are visible.
-#
-case "$DISPLAY" in
-    :0|:0.0)	;;
-    *)	exit 0	;;
-esac
-
-#
-# The geometry of xconsole is set in the Xresource file.
-#
-(
-    exec setsid $xconsole -notify -nostdin -verbose -exitOnFail
-) & echo $! > /var/run/xconsole.pid
-
 exit 0
