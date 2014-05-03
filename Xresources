@@ -7,6 +7,9 @@ xlogin*login.translations: #override\
 	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
 	<Key>Return:	 set-session-argument()		finish-field()
 
+!xlogin.Login.x: 
+xlogin*Login*y:    80
+
 #undef linux
 #undef Linux
 #undef LINUX
@@ -40,7 +43,10 @@ xlogin*borderWidth:		0
 xlogin*frameWidth:		5
 xlogin*innerFramesWidth:	2
 xlogin*Foreground:		black
-xlogin*Background:		#c0c0c0
+!xlogin*Background:		#c0c0c0
+!xlogin*shdColor:		#828282
+!xlogin*hiColor:		#e0e0e0
+xlogin*Background:		#9399AD
 xlogin*shdColor:		#828282
 xlogin*hiColor:			#e0e0e0
 #else
