@@ -201,7 +201,4 @@ if test -x $xmodmap -o -x $xkbcomp ; then
     fi
 fi
 
-#
-# No xconsole in any case
-#
 exit 0
