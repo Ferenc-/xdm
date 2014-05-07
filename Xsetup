@@ -110,24 +110,6 @@ if test "$kdm" = "yes" -a -x ${BINDIR}/kvkbd; then
 fi
 
 #
-# Check if the machine is a TabletPC and start
-# xvkbd in xdm do be able to input username and password 
-# 
-#$halporp --key system.formfactor.subtype --string tabletpc
-#if test $? -eq 0 -a -x $xvkbd ; then
-#    # Bug 149957, Bug #408736
-#    ( declare -i t=100
-#      while test $((t--)) -gt 0 ; do
-#          case "$(xwininfo -root -children)" in
-#            *greet*|xlogin) break ;;
-#          esac
-#          sleep 0.1
-#      done
-#      HOME=/root exec $xvkbd $xvkbdargs
-#    ) & echo $! > /var/run/xvkbd.pid
-#fi
-
-#
 # Handle background:
 #   First kdm/gdm choise, then xdm/user choise and
 #   if no choise is given use the system defaults.
